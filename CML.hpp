@@ -15,6 +15,8 @@ inline float Cos(float angle) { return cosf(angle); }
 
 inline float Sin(float angle) { return sinf(angle); }
 
+inline float Arctan(float y, float x) { return atan2f(y, x); }
+
 class Vector2D
 {
 public:
@@ -38,6 +40,8 @@ public:
     Vector2D& operator-=(const Vector2D& right) { X -= right.X; Y -= right.Y; return *this; }
     
     float LengthSquared() const noexcept { return X * X + Y * Y; }
+    
+    float Length() const { return sqrtf(LengthSquared()); }
 };
 
 class Random
