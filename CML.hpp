@@ -51,6 +51,8 @@ public:
     
     static void Seed(unsigned int seed);
     
+    static int GetRandomInt(int min, int max);
+    
     static float GetRandomFloat(float min, float max);
     
     static Vector2D GetRandomVector2D(const Vector2D& min, const Vector2D& max);
